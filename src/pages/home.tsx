@@ -9,7 +9,7 @@ const categories = [
   { key: "pecivo", label: "Peciva" },
 ] as const;
 
-export default function Home() {
+export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState("");
 
     const filteredRecipes = recipes.filter((recipe) => {
@@ -44,7 +44,6 @@ export default function Home() {
                                     key={recipe.id}
                                     id={recipe.id}
                                     link={`/recipes/${recipe.id}`}
-                                    cover={recipe.cover}
                                     title={recipe.title}
                                     minutes={recipe.minutes}
                                     tags={recipe.tags}

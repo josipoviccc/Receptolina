@@ -1,5 +1,5 @@
 import { Recipe } from "../types/recipes";
-import tartWithBerries from "../assests/sweetRecipes/tartWithBerries.jpg";
+import tartWithBerries from "../assets/tartWithBerries.jpg";
 
 export const Recipes: Recipe[] = [{
     id: 1,
@@ -7,7 +7,6 @@ export const Recipes: Recipe[] = [{
     title: "Tart od vanilije i bobičastog voća",
     minutes: 60,
     tags: ["vanilija", "bobičasto voće"],
-    cover: tartWithBerries,
     category: "slatko"
 }
 ]
