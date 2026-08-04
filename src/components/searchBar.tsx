@@ -14,6 +14,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
     return (
         <div className="search-bar">
             <input 
+                className="search-input"
                 type="text"
                 placeholder="Pretraži recepte..."
                 value={value}

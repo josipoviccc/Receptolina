@@ -13,6 +13,12 @@ html, body, #root {
     color:#1A1A1A;
 }
 
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 32px 40px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -47,6 +53,55 @@ html, body, #root {
   color: #B33A1E;
 }
 
+/*SEARCH BAR*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid #E8DFD0;
+  border-radius: 20px;
+  background-color: #FFFDF9;
+  margin-top: 20px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  background-color: transparent;
+  width: 100%;
+}
+
+/*CATEGORY SECTION*/
+.category-section {
+  margin-top: 48px;
+}
+
+.category-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #B33A1E;
+  padding-bottom: 10px;
+}
+
+.category-header h2 {
+  font-family: "Fraunces";
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.category-count {
+  font-family: "Inter";
+  font-size: 13px;
+  color: #A8998A;
+  margin-left: auto;
+}
 
 /*RECIPE CARD*/
 .recipe-card-container {
@@ -56,6 +111,7 @@ html, body, #root {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  max-width: 260px;
 }
 
 .recipe-card-container:hover {

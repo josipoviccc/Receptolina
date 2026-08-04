@@ -7,7 +7,7 @@ export default function Navbar() {
 
     return(
         <nav className="navbar">
-            <h2><Link to="/">KATINA KUHINJA</Link></h2>
+            <h2><Link to="/">RecipeBox</Link></h2>
             <div className='menu' onClick={() => setMenuOpen(!menuOpen)}>
                 <span></span>
                 <span></span>
