@@ -1,12 +1,13 @@
 import { useState } from "react";
 import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
-import { Recipes as recipes } from "../data/recipesData";
+import { AllRecipes as recipes } from "../data/allRecipes";
 
 const categories = [
-  { key: "slano", label: "Slano" },
-  { key: "slatko", label: "Slatko" },
-  { key: "pecivo", label: "Peciva" },
+    { key: "slano", label: "Slano" },
+    { key: "slatko", label: "Slatko" },
+    { key: "pecivo", label: "Peciva" },
+    { key: "umaci", label: "Umaci" },
 ] as const;
 
 export default function HomePage() {

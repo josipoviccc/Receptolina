@@ -17,6 +17,7 @@ export default function Navbar() {
                     <li><Link to="/sweetRecipes">Slatko</Link></li>
                     <li><Link to="/savoryRecipes">Slano</Link></li>
                     <li><Link to="/pastryRecipes">Peciva</Link></li>
+                    <li><Link to="/saucesRecipes">Umaci</Link></li>
                 </ul>
         </nav>
     );
