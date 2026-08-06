@@ -1,9 +1,0 @@
-import TitleSection from "../components/categoryComponents/titleSection";
-
-export default function PastryRecipesPage() {
-    return (
-        <div>
-            <TitleSection label="Peciva" categoryKey="pecivo" />
-        </div>
-    );
-}

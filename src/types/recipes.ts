@@ -4,7 +4,7 @@ export type Recipe = {
   link: string;
   minutes: number;
   tags: string[];
-  category: "slano" | "slatko" | "pecivo" | "umaci";
+  category: string;
   risingTime?: number;
   coolingTime?: number;
 };

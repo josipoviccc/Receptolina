@@ -4,7 +4,7 @@ import { Recipe } from "../types/recipes";
 
 type CategorySectionProps = {
     label: string;
-    categoryKey: "slano" | "slatko" | "pecivo" | "umaci";
+    categoryKey: string;
     recipes: Recipe[];
 };
 

@@ -14,10 +14,10 @@ export default function Navbar() {
                 <span></span>
             </div>
                 <ul className={menuOpen ? "open" : ""}>
-                    <li><Link to="/sweetRecipes">Slatko</Link></li>
-                    <li><Link to="/savoryRecipes">Slano</Link></li>
-                    <li><Link to="/pastryRecipes">Peciva</Link></li>
-                    <li><Link to="/saucesRecipes">Umaci</Link></li>
+                    <li><NavLink to="/categoryPage/slatko" className={({ isActive }) => isActive ? "active" : ""}>Slatko</NavLink></li>
+                    <li><NavLink to="/categoryPage/slano" className={({ isActive }) => isActive ? "active" : ""}>Slano</NavLink></li>
+                    <li><NavLink to="/categoryPage/pecivo" className={({ isActive }) => isActive ? "active" : ""}>Peciva</NavLink></li>
+                    <li><NavLink to="/categoryPage/umaci" className={({ isActive }) => isActive ? "active" : ""}>Umaci</NavLink></li>
                 </ul>
         </nav>
     );
