@@ -189,3 +189,10 @@ html, body, #root {
   margin: 0 auto;
   padding: 24px 32px 40px; 
 }
+
+/*RECIPE PAGE*/
+.recipe-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 32px 40px; 
+}

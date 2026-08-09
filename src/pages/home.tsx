@@ -3,12 +3,14 @@ import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
 import { AllRecipes as recipes } from "../data/allRecipes";
 
+
 const categories = [
     { key: "slano", label: "Slano" },
     { key: "slatko", label: "Slatko" },
     { key: "pecivo", label: "Peciva" },
     { key: "umaci", label: "Umaci" },
 ] as const;
+
 
 export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -37,6 +39,12 @@ export default function HomePage() {
 
                 if (categoryRecipes.length === 0) return null;
 
+
+                //za formu 
+                const [inputNaziv, setInputNaziv] = useState("");
+                const [inputVrijeme, setInputVrijeme] = useState("");
+                const [inputTag, setInputTag] = useState("");
+                
                 return (
                     <CategorySection
                         key={cat.key}
