@@ -9,3 +9,5 @@ export const AllRecipes = [
   ...PastryRecipes,
   ...SaucesRecipes,
 ];
+
+export default AllRecipes;

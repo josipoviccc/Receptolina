@@ -21,13 +21,16 @@ export default function CategorySection({ label, categoryKey, recipes }: Categor
                     <RecipeCard
                         key={recipe.id}
                         id={recipe.id}
-                        link={`/recipes/${recipe.id}`}
+                        link={`/recipePage/${recipe.id}`}
                         title={recipe.title}
                         minutes={recipe.minutes}
                         tags={recipe.tags}
                         category={recipe.category}
+                        portions={recipe.portions}
                         risingTime={recipe.risingTime}
                         coolingTime={recipe.coolingTime}
+                        steps={recipe.steps}
+                        ingredients={recipe.ingredients}
                     />
                 ))}
             </div>

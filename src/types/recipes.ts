@@ -5,7 +5,10 @@ export type Recipe = {
   link: string;
   minutes: number;
   tags: string[];
+  ingredients: string[];
+  steps: string[];
   category: string;
+  portions: number;
   risingTime?: number;
   coolingTime?: number;
 };

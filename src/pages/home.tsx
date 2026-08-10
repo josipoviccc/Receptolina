@@ -41,9 +41,10 @@ export default function HomePage() {
 
 
                 //za formu 
-                const [inputNaziv, setInputNaziv] = useState("");
-                const [inputVrijeme, setInputVrijeme] = useState("");
-                const [inputTag, setInputTag] = useState("");
+                //const [inputNaziv, setInputNaziv] = useState("");
+                //const [inputVrijeme, setInputVrijeme] = useState("");
+                //const [inputTag, setInputTag] = useState("");
+                
                 
                 return (
                     <CategorySection

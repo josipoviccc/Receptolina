@@ -1,6 +1,8 @@
 import RecipePageHeader from "../components/recipePageComponents/recipeHeader";
 import { useNavigate, useParams } from "react-router-dom";
 import { Recipe } from "../types/recipes";
+import RecipeTitle from "../components/recipePageComponents/recipeTitle";
+import RecipeDetails from "../components/recipePageComponents/recipeDetails";
 
 export default function RecipePage({ recipes }: { recipes: Recipe[] }) {
     const {id} = useParams<{id: string}>();
@@ -19,6 +21,8 @@ export default function RecipePage({ recipes }: { recipes: Recipe[] }) {
     return (
         <div className="recipe-page">
             <RecipePageHeader recipe={recipe} />    
+            <RecipeTitle recipe={recipe} />
+            <RecipeDetails recipe={recipe} />
         </div>
     );
 }
