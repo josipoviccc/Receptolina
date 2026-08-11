@@ -205,7 +205,12 @@ html, body, #root {
 
 .recipe-page-link{
   background: none;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #2B2620;
   border: none;
+  gap: 6px;
+  margin-bottom: 20px;
   cursor: pointer;
   padding: 0;
 }
@@ -224,10 +229,76 @@ html, body, #root {
   display: block;
 }
 
+.recipe-title-text {
+  display: flex;
+  font-family: "Fraunces", serif;
+}
+
 .recipe-description {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #2B2620;
-  margin-bottom: 20px;
   display: flex;
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: #EFE7D8;
+
 }
+
+.recipe-description-item {
+  margin-right: 50px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.recipe-details {
+  display: flex;
+  font-size: 15px;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+.recipe-details-item {
+  flex: 1;
+  margin-right: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.recipe-time{
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.recipe-details-item h3{
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  color: #2B2620;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recipe-details-item ol {
+  padding-left: 20px;
+  margin:0;
+}
+
+.recipe-details-item ol li {
+  margin: 7px 0;
+  line-height: 1.5;
+}
+
+.recipe-details-item ol li:last-child {
+  margin-bottom: 0;
+}
+
+.ingredient-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #EFE7D8;
+  list-style: none;
+}
+
+

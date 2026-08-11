@@ -1,5 +1,6 @@
 import { Recipe } from "../../types/recipes";
 
+
 export default function RecipeTitle({ recipe }: { recipe: Recipe }) {
     return (
         <div className="recipe-title">
