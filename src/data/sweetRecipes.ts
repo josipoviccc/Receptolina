@@ -8,19 +8,29 @@ export const SweetRecipes: Recipe[] = [{
     title: "Tart od vanilije i bobičastog voća",
     minutes: 60,
     tags: ["vanilija", "bobičasto voće"],
-    ingredients: [
+    ingredientGroups: [
+    {
+        items: [
         { name: "jaje", quantity: "1" },
         { name: "šećer", quantity: "60 g" },
         { name: "omekšali maslac", quantity: "115 g" },
         { name: "ekstrakt vanilije", quantity: "1 čajna žličica" },
         { name: "sol", quantity: "prstohvat" },
         { name: "brašno", quantity: "190 g" },
+        ],
+    },
+    {
+        groupName: "Za košarice: ",
+        items: [
         { name: "žumanjak", quantity: "2" },
         { name: "šećer", quantity: "35 g" },
         { name: "kukuruzni škrob", quantity: "20 g" },
         { name: "vruće mlijeko", quantity: "300 ml" },
         { name: "ekstrakt vanilije", quantity: "1 čajna žličica" },
         { name: "bobičasto voće za ukras", quantity: "" }
+
+        ]
+    }
     ],
     category: "slatko",
     portions: 10,

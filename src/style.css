@@ -293,6 +293,23 @@ html, body, #root {
   margin-bottom: 0;
 }
 
+.ingredient-group {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.ingredient-group h4 {
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  color: #2B2620;
+  margin-bottom: 10px;
+}
+
+.ingredient-group ul {
+  padding: 0;
+  margin: 0;
+}
+
 .ingredient-row {
   display: flex;
   justify-content: space-between;

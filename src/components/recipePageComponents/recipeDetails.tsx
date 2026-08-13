@@ -8,11 +8,18 @@ export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
                 <div className="recipe-details-header" style={{ borderBottom: "2px solid " + category_colors[recipe.category] }}>
                     <h3>Sastojci</h3>
                 </div>
-                <ul>
-                    {recipe.ingredients.map((ingredient, index) => (
-                        <li className="ingredient-row" key={index}>
-                            <span>{ingredient.name}</span>
-                            <span>{ingredient.quantity}</span> 
+                <ul className="ingredients-groups">
+                    {recipe.ingredientGroups.map((group, i) => (
+                        <li className="ingredient-group" key={i}>
+                            {group.groupName && <h4>{group.groupName}</h4>}
+                            <ul>
+                                {group.items.map((ingredient, j) => (
+                                    <li className="ingredient-row" key={j}>
+                                        <span>{ingredient.name}</span>
+                                        <span>{ingredient.quantity}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </li>
                     ))}
                 </ul>
