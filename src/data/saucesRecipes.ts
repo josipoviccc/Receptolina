@@ -1,32 +1,62 @@
 import { Recipe } from "../types/recipes";
+import raisingCanes from "../assets/sauceRecipes/raising-canes-sauce.jpg";
+import kentuckyGold from "../assets/sauceRecipes/kentucky-gold-sauce.png";
 
 export const SaucesRecipes: Recipe[] = [
     {
         id: 4000,
-        link: "/recipes/4",
+        link: "/recipes/4000",
+        title: "Raising Canes umak",
+        minutes: 10,
+        tags: ["umaci", "raising canes"],
+        category: "umaci",
+        image: raisingCanes,
+        portions: 3,
+        ingredientGroups: [
+            {
+                items: [
+                    { name: "Majoneza", quantity: "120 g" },
+                    { name: "Kečap", quantity: "75 g" },
+                    { name: "Worchestershire sos", quantity: "8 g" },
+                    { name: "Češnjak u prahu", quantity: "pola žličice" },
+                    { name: "sol", quantity: "pola žličice" },
+                    { name: "papar", quantity: "pola žličice" },
+                    
+                ]
+            }
+        ],
+        steps: [
+            "Pomiješajte sve sastojke u zdjeli dok se sastojci ne sjedine. ",
+            "Možete poslužiti odmah ili ostaviti u hladnjaku 2 sata da se okusi prožmu."
+        ]
+    },
+    {
+        id: 4001,
+        link: "/recipes/4001",
         title: "Kentucky Gold umak",
         minutes: 10,
-        tags: ["umaci"],
+        tags: ["umaci", "kfc"],
         category: "umaci",
+        image: kentuckyGold,
         portions: 3,
-        ingredients: [
-            { name: "brašno", quantity: "200 g" },
-            { name: "šećer u prahu", quantity: "100 g" },
-            { name: "sol", quantity: "1 prstohvat" },
-            { name: "hladni maslac", quantity: "100 g" },
-            { name: "jaje", quantity: "1" },
-            { name: "mascarpone sir", quantity: "250 g" },
-            { name: "šećer", quantity: "2 žlice" },
-            { name: "vanilija", quantity: "1 žličica" },
-            { name: "jaja", quantity: "2" },
-            { name: "bobičasto voće za ukras", quantity: "" }
-    ],
+        ingredientGroups: [
+            {
+                items: [
+                    { name: "Majoneza", quantity: "2 žlice" },
+                    { name: "Senf", quantity: "2 žličice" },
+                    { name: "Soja sos", quantity: "1 žličica" },
+                    { name: "Češnjak u prahu", quantity: "pola žličice" },
+                    { name: "Luk u prahu", quantity: "pola žličice" },
+                    { name: "Dimljena paprika", quantity: "pola žličice" },
+                    { name: "Muškatni oraščić", quantity: "prstohvat" },
+                    { name: "Med", quantity: "2 žličica" },
+                    
+                ]
+            }
+        ],
         steps: [
-            "Skuhajte tjesteninu prema uputama na pakiranju. Ocijedite i ostavite sa strane.",
-            "U velikoj tavi zagrijte maslac na srednje jakoj vatri. Dodajte nasjeckani luk i češnjak te pržite dok ne postanu mekani i mirisni.",
-            "Dodajte narezanu piletinu u tavu i pržite dok ne postane zlatno smeđa i potpuno kuhana.",
-            "Umiješajte vrhnje za kuhanje i ribani parmezan. Kuhajte dok umak ne postane gust i kremast.",
-            "Posolite i popaprite po ukusu. Poslužite preko kuhane tjestenine."
+            "Pomiješajte sve sastojke u zdjeli dok se sastojci ne sjedine. ",
+            "Možete poslužiti odmah ili ostaviti u hladnjaku 2 sata da se okusi prožmu."
         ]
     },
 ]

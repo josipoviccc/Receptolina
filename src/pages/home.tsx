@@ -38,20 +38,12 @@ export default function HomePage() {
                 );
 
                 if (categoryRecipes.length === 0) return null;
-
-
-                //za formu 
-                //const [inputNaziv, setInputNaziv] = useState("");
-                //const [inputVrijeme, setInputVrijeme] = useState("");
-                //const [inputTag, setInputTag] = useState("");
-                
-                
+                                
                 return (
                     <CategorySection
-                        key={cat.key}
                         label={cat.label}
                         categoryKey={cat.key}
-                        recipes={categoryRecipes}
+                        recipes={categoryRecipes.slice(0, 4)}
                     />
                 );
             })}

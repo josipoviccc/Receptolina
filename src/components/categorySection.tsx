@@ -17,7 +17,7 @@ export default function CategorySection({ label, categoryKey, recipes }: Categor
                 <h2>{label}</h2>
             </div>
             <div className="recipe-grid">
-                {recipes.slice(0,4).map((recipe) => (
+                {recipes.map((recipe) => (
                     <RecipeCard
                         key={recipe.id}
                         id={recipe.id}
@@ -30,7 +30,7 @@ export default function CategorySection({ label, categoryKey, recipes }: Categor
                         risingTime={recipe.risingTime}
                         coolingTime={recipe.coolingTime}
                         steps={recipe.steps}
-                        ingredients={recipe.ingredients}
+                        ingredientGroups={recipe.ingredientGroups}
                     />
                 ))}
             </div>

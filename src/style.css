@@ -26,6 +26,8 @@ html, body, #root {
   padding: 20px 40px;
   background-color: #FFFDF9;
   border-bottom: 1px solid #E8DFD0;
+  position: sticky;
+  top: 0;
 }
 
 .navbar ul{
@@ -48,10 +50,40 @@ html, body, #root {
   color: #B33A1E;
   text-decoration: none;
 }
-
-.navbar h2 a:visited {
-  color: #B33A1E;
+.navbarLink {
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
 }
+
+.navbarLink.active {
+  background: #B33A1E;
+  color: #FAF6EF;
+}
+
+nav ul li a:not(.active):hover{/*ako stranica nije aktivna onda se promijeni boja kad se hovera*/
+    background: #B33A1E;
+    color: #f3f2f2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/*ZA MOBILNI NAVBAR*/
+nav .menu{
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+nav .menu span{
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;  
+}
+
 
 /*SEARCH BAR*/
 .search-bar {
@@ -318,4 +350,39 @@ html, body, #root {
   list-style: none;
 }
 
+@media (max-width: 768px) {
+  nav .menu{
+        display: flex;
+    }
+    nav {
+        flex-direction: column;
+        align-items: start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-bottom: 0.25rem;
+    }
+    nav ul.open{/*ako meni ima klasu open onda se prikazuje, inace ne*/
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
+    /*RECIPE PAGE*/
+    .recipe-details {
+        flex-direction: column;
+    }
+
+    .recipe-details-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .recipe-details-item:last-child {
+        margin-bottom: 0;
+    }
+}

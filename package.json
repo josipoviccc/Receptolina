@@ -1,11 +1,11 @@
 {
-  "name": "GameLog",
+  "name": "RecipeLog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "sideEffects": true,
   "scripts": {
-    "dev": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --servedir=. --loader:.png=file --loader:.jpg=file --loader:.css=css --public-path=/dist/",
+    "dev": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --servedir=. --serve=0.0.0.0:8000 --loader:.png=file --loader:.jpg=file --loader:.css=css --public-path=/dist/",
     "build": "tsc && esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --public-path=/dist/"
   },
   "keywords": [],

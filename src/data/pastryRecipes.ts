@@ -1,34 +1,36 @@
 import { Recipe } from "../types/recipes";
+import kruhBezMijesenja from "../assets/pastryRecipes/kruh-bez-mijesenja.jpg";
 
 export const PastryRecipes: Recipe[] = [
     {
         id: 3000,
-        link: "/recipes/3",
-        title: "Brioche pecivo",
+        link: "/recipes/3000",
+        title: "Kruh bez mijesenja",
         minutes: 75,
         tags: ["brioche", "pecivo"],
         category: "pecivo",
-        risingTime: 60,
+        image: kruhBezMijesenja,
+        risingTime: 480,
         portions: 4,
-        ingredients: [
-            { name: "brašno", quantity: "200 g" },
-            { name: "šećer u prahu", quantity: "100 g" },
-            { name: "sol", quantity: "1 prstohvat" },
-            { name: "hladni maslac", quantity: "100 g" },
-            { name: "jaje", quantity: "1" },
-            { name: "mascarpone sir", quantity: "250 g" },
-            { name: "šećer", quantity: "2 žlice" },
-            { name: "vanilija", quantity: "1 žličica" },
-            { name: "jaja", quantity: "2" },
-            { name: "bobičasto voće za ukras", quantity: "" }
+        ingredientGroups: [
+        {
+            items: [
+                { name: "brašno", quantity: "750 g" },
+                { name: "sol", quantity: "2-3 žličice" },
+                { name: "suhi kvasac", quantity: "1 žličica" },
+                { name: "topla voda", quantity: "450 ml" },
+            ]
+        }
+            
     ],
         steps: [
-            "Skuhajte tjesteninu prema uputama na pakiranju. Ocijedite i ostavite sa strane.",
-            "U velikoj tavi zagrijte maslac na srednje jakoj vatri. Dodajte nasjeckani luk i češnjak te pržite dok ne postanu mekani i mirisni.",
-            "Dodajte narezanu piletinu u tavu i pržite dok ne postane zlatno smeđa i potpuno kuhana.",
-            "Umiješajte vrhnje za kuhanje i ribani parmezan. Kuhajte dok umak ne postane gust i kremast.",
-            "Posolite i popaprite po ukusu. Poslužite preko kuhane tjestenine."
+            "U veliku zdjelu stavite brašno, sol i suhi kvasac. Dobro promiješajte.",
+            "Dodajte toplu vodu i mijesite tijesto dok se svi suhi sastojci ne povežu i imate ljepljivo tijesto.",
+            "Pokrijte zdjelu i ostavite tijesto da se diže 8-12 sati.",
+            "Nakon što se tijesto diglo, prebacite ga na pobrašnjenu površinu i oblikujte ga tek toliko da ne bude ljepljivo.",
+            "Podijelite tijesto na 2 jednaka dijela i oblikujte ih u štruce.",
+            "Prebacite ih u lonac s poklopcem i stavite ih u hladnu pećnicu na 220°C 30 minuta (nemojte prethodno zagrijavati pećnicu). Nakon toga pecite bez poklopca još 30 minuta dok ne dobijete zlatno-smeđu koricu.",
+            "Ostavite da se ohladi prije rezanja."
         ]
     },
-
-]
+];
