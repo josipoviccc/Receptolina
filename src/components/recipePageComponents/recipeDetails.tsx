@@ -6,7 +6,7 @@ interface RecipeDetailsProps {
 }
 
 export default function RecipeDetails({ recipe }: RecipeDetailsProps) {
-    const categoryColor = categories.find(cat => cat.key === recipe.category)?.color;
+    const categoryColor = categories.find(cat => cat.key === recipe.category)?.color; 
     return (
         <div className="recipe-details">
             <div className="recipe-details-item">
