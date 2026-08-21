@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Recipe } from "../../types/recipes";
 
 interface RecipePageHeaderProps {
@@ -9,7 +9,7 @@ export default function RecipePageHeader({ recipe }: RecipePageHeaderProps) {
     return (
         <div className="recipe-page-header">
             <button onClick={() => navigate(-1)} className="recipe-page-link">
-                <h4>&larr; Natrag</h4>
+                &larr; Natrag
             </button>
             <img src={recipe.image} alt={recipe.title} className="recipe-page-image" />
         </div>

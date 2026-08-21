@@ -1,7 +1,10 @@
 import { Recipe } from "../../types/recipes";
 
+type RecipeTitleProps = {
+    recipe: Recipe;
+};
 
-export default function RecipeTitle({ recipe }: { recipe: Recipe }) {
+export default function RecipeTitle({ recipe }: RecipeTitleProps) {
     return (
         <div className="recipe-title">
             <h2 className="recipe-title-text">{recipe.title}</h2>

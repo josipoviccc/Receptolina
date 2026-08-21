@@ -1,20 +1,28 @@
 import {useState} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
-import { categoriesConfig } from "../data/categoriesConfig";
+import { Recipe } from "../types/recipes";
 
-export default function CategoryPage() {
-    const { categoryKey } = useParams<{categoryKey: string }>();
+type CategoryPageProps = {
+    recipes: Recipe[];
+};
+
+export default function CategoryPage({ recipes }: CategoryPageProps) {
+    const { categoryKey } = useParams(); //vraća string ili undefined iz url-a, nakon :
     const [searchQuery, setSearchQuery] = useState("");
+    const navigate = useNavigate();
 
-    if (!categoryKey || !categoriesConfig[categoryKey]) {
-        return <div>Kategorija ne postoji.</div>;
+    if (!categoryKey) { 
+        return <div>
+            <h2>Kategorija nije pronađena.</h2>
+            <button onClick={() => navigate('/')}>Natrag</button>
+        </div>;
     }
 
-    const config = categoriesConfig[categoryKey];
+    const categoryRecipes = recipes.filter((recipe) => recipe.category === categoryKey);
 
-    const filteredRecipes = config.recipes.filter((recipe) => {
+    const filteredRecipes = categoryRecipes.filter((recipe) => {
                 if (searchQuery.trim() === "") return true;
                 try {
                     const regex = new RegExp(searchQuery, "i");
@@ -30,8 +38,6 @@ export default function CategoryPage() {
         <div className="category-page">
             <SearchBar onSearch={setSearchQuery} />
             <CategorySection
-                key={categoryKey}
-                label={config.label}
                 categoryKey={categoryKey}
                 recipes={filteredRecipes}
             />

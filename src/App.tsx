@@ -11,7 +11,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/categoryPage/:categoryKey" element={<CategoryPage />} />
+        <Route path="/categoryPage/:categoryKey" element={<CategoryPage recipes={AllRecipes} />} /> //prosljeđuju se svi recepti, a filtriranje se događa u komponenti CategoryPage i RecipePage
         <Route path="/recipePage/:id" element={<RecipePage recipes={AllRecipes} />} />
       </Routes>
     </>

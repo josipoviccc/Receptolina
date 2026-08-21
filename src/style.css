@@ -238,19 +238,13 @@ nav .menu span{
 .recipe-page-link{
   background: none;
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   color: #2B2620;
   border: none;
   gap: 6px;
   margin-bottom: 20px;
   cursor: pointer;
   padding: 0;
-}
-
-.recipe-page-link h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  margin: 0;
 }
 
 .recipe-page-image {

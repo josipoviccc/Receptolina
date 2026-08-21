@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 type SearchBarProps = {
-    onSearch: (query: string) => void;
+    onSearch: (searchText: string) => void; //onSearch funkcija koja prima argument koji je tipa string i ne vraća ništa
 };
 
 export default function SearchBar({ onSearch }: SearchBarProps) {

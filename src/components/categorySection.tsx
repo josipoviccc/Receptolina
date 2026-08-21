@@ -1,20 +1,20 @@
 import RecipeCard from "./recipeCard";
-import { category_colors } from "../constants";
+import { categories } from "../constants";
 import { Recipe } from "../types/recipes";
 
 type CategorySectionProps = {
-    label: string;
     categoryKey: string;
     recipes: Recipe[];
 };
 
-export default function CategorySection({ label, categoryKey, recipes }: CategorySectionProps) {
+export default function CategorySection({ categoryKey, recipes }: CategorySectionProps) {
+    const category = categories.find(c => c.key === categoryKey);
     return (
         <div className="category-section">
             <div 
                 className="category-header" 
-                style={{ borderColor: category_colors[categoryKey] }}>
-                <h2>{label}</h2>
+                style={{ borderColor: category?.color }}> {/* pronalazi boju iz constants.ts na osnovu categoryKey */}
+                <h2>{category?.label}</h2>
             </div>
             <div className="recipe-grid">
                 {recipes.map((recipe) => (

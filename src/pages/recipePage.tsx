@@ -5,7 +5,7 @@ import RecipeTitle from "../components/recipePageComponents/recipeTitle";
 import RecipeDetails from "../components/recipePageComponents/recipeDetails";
 
 export default function RecipePage({ recipes }: { recipes: Recipe[] }) {
-    const {id} = useParams<{id: string}>();
+    const { id } = useParams(); //vraća odmah id iz url-a, nakon : i pretvara ga u string
     const navigate = useNavigate();
     const recipe = recipes.find((r) => r.id === Number(id));
 

@@ -1,11 +1,16 @@
 import { Recipe } from "../../types/recipes";
-import { category_colors } from "../../constants";
+import { categories } from "../../constants";
 
-export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
+interface RecipeDetailsProps {
+    recipe: Recipe;
+}
+
+export default function RecipeDetails({ recipe }: RecipeDetailsProps) {
+    const categoryColor = categories.find(cat => cat.key === recipe.category)?.color;
     return (
         <div className="recipe-details">
             <div className="recipe-details-item">
-                <div className="recipe-details-header" style={{ borderBottom: "2px solid " + category_colors[recipe.category] }}>
+                <div className="recipe-details-header" style={{ borderBottom: "2px solid " + categoryColor }}>
                     <h3>Sastojci</h3>
                 </div>
                 <ul className="ingredients-groups">
@@ -25,7 +30,7 @@ export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
                 </ul>
             </div>
             <div className="recipe-details-item">
-                <div className="recipe-details-header" style={{ borderBottom: "2px solid " + category_colors[recipe.category] }}>
+                <div className="recipe-details-header" style={{ borderBottom: "2px solid " + categoryColor }}>
                     <h3>Priprema</h3>
                 </div>
                 <ol>
