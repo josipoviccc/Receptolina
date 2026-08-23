@@ -1,7 +1,7 @@
 import { Recipe } from "../../types/recipes";
 import { categories } from "../../constants";
 
-interface RecipeDetailsProps {
+type RecipeDetailsProps = {
     recipe: Recipe;
 }
 

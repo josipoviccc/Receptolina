@@ -8,7 +8,7 @@ type CategorySectionProps = {
 };
 
 export default function CategorySection({ categoryKey, recipes }: CategorySectionProps) {
-    const category = categories.find(c => c.key === categoryKey);
+    const category = categories.find(cat => cat.key === categoryKey);
     return (
         <div className="category-section">
             <div 

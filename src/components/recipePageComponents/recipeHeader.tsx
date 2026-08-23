@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Recipe } from "../../types/recipes";
 
-interface RecipePageHeaderProps {
+type RecipePageHeaderProps = {
     recipe: Recipe;
 }
 export default function RecipePageHeader({ recipe }: RecipePageHeaderProps) {

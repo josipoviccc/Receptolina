@@ -16,7 +16,7 @@ export default function CategoryPage({ recipes }: CategoryPageProps) {
     if (!categoryKey) { 
         return <div>
             <h2>Kategorija nije pronađena.</h2>
-            <button onClick={() => navigate('/')}>Natrag</button>
+            <button onClick={() => navigate('/')}>Natrag na početnu stranicu</button>
         </div>;
     }
 

@@ -67,7 +67,7 @@ nav ul li a:not(.active):hover{/*ako stranica nije aktivna onda se promijeni boj
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 /*ZA MOBILNI NAVBAR*/
-nav .menu{
+.navbar .menu {
     display: none;
     position: absolute;
     top: 0.75rem;
@@ -76,14 +76,18 @@ nav .menu{
     justify-content: space-between;
     width: 2.25rem;
     height: 2rem;
-}
-nav .menu span{
-    height: 0.4rem;
-    width: 100%;
-    background-color: white;
-    border-radius: 0.2rem;  
+    gap: 4px;
+    cursor: pointer;
+    margin: 35px 20px 0 0;
 }
 
+.navbar .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #B33A1E;
+    border-radius: 0.2rem;
+    margin: 0;
+}
 
 /*SEARCH BAR*/
 .search-bar {
@@ -345,26 +349,30 @@ nav .menu span{
 }
 
 @media (max-width: 768px) {
-  nav .menu{
-        display: flex;
-    }
-    nav {
-        flex-direction: column;
-        align-items: start;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        margin-bottom: 0.25rem;
-    }
-    nav ul.open{/*ako meni ima klasu open onda se prikazuje, inace ne*/
-        display: flex;
-    }
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
+  .navbar .menu {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-bottom: 0.25rem;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
 
     /*RECIPE PAGE*/
     .recipe-details {

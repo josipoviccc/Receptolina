@@ -13,7 +13,7 @@ export default function RecipePage({ recipes }: { recipes: Recipe[] }) {
         return (
             <div>
                 <h2>Recept nije pronađen!</h2>
-                <button onClick={() => navigate('/')}>Natrag</button>
+                <button onClick={() => navigate('/')}>Natrag na početnu stranicu</button>
             </div>
         );
     }

@@ -9,7 +9,7 @@ export default function RecipeCard({
     tags,
     category
 }: Recipe) {
-    const categoryColor = categories.find(c => c.key === category)?.color; //?.color ako ne postoji category, ne baca error, nego undefined
+    const categoryColor = categories.find(cat => cat.key === category)?.color; //?.color ako ne postoji category, ne baca error, nego undefined
     return (
         <div className="recipe-card-container">
         <Link to={link} className="recipe-card">
