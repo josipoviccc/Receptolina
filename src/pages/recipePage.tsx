@@ -11,7 +11,7 @@ type RecipePageProps = {
 export default function RecipePage({ recipes }: RecipePageProps) {
     const { id } = useParams(); //vraća odmah id iz url-a, nakon : i pretvara ga u string
     const navigate = useNavigate();
-    const recipe = recipes.find((r) => r.id === Number(id));
+    const recipe = recipes.find(r => r.id === Number(id));
 
     if (!recipe) {
         return (
