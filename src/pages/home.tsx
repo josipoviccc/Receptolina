@@ -7,13 +7,13 @@ import { categories } from "../data/constants";
 export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState(""); //searchQuery je trenutni tekst u search baru, a setSearchQuery je funkcija koja mijenja searchQuery
 
-    const filteredRecipes = recipes.filter((recipe) => {
+    const filteredRecipes = recipes.filter(recipe => {
         if (searchQuery.trim() === "") return true;
         try {
             const regex = new RegExp(searchQuery, "i"); //i znači da je case insensitive
             return (
-                regex.test(recipe.title) ||
-                recipe.tags.some((tag) => regex.test(tag))
+                regex.test(recipe.title) || // testira da li se searchQuery nalazi u title-u recepta
+                recipe.tags.some((tag) => regex.test(tag)) // testira da li se searchQuery nalazi u tagovima recepta, some vraća true ako barem jedan tag zadovoljava uvjet
             );
         } catch {
             return true;
