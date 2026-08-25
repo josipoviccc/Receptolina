@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
 import { AllRecipes as recipes } from "../data/allRecipes";
-import { categories } from "../constants";
+import { categories } from "../data/constants";
 
 export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState(""); //searchQuery je trenutni tekst u search baru, a setSearchQuery je funkcija koja mijenja searchQuery

@@ -1,5 +1,5 @@
 import RecipeCard from "./recipeCard";
-import { categories } from "../constants";
+import { categories } from "../data/constants";
 import { Recipe } from "../types/recipes";
 
 type CategorySectionProps = {
@@ -13,14 +13,15 @@ export default function CategorySection({ categoryKey, recipes }: CategorySectio
         <div className="category-section">
             <div 
                 className="category-header" 
-                style={{ borderColor: category?.color }}> {/* pronalazi boju iz constants.ts na osnovu categoryKey */}
-                <h2>{category?.label}</h2>
+                style={{ borderColor: category?.color ?? '#9b9797' }}> 
+                <h2>{category?.label ?? 'Nepoznata kategorija'}</h2>
             </div>
             <div className="recipe-grid">
                 {recipes.map((recipe) => (
                     <RecipeCard
                         key={recipe.id}
                         id={recipe.id}
+                        image={recipe.image}
                         link={`/recipePage/${recipe.id}`}
                         title={recipe.title}
                         minutes={recipe.minutes}

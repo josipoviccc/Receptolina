@@ -1,12 +1,12 @@
 import { Recipe } from "../../types/recipes";
-import { categories } from "../../constants";
+import { categories } from "../../data/constants";
 
 type RecipeDetailsProps = {
     recipe: Recipe;
 }
 
 export default function RecipeDetails({ recipe }: RecipeDetailsProps) {
-    const categoryColor = categories.find(cat => cat.key === recipe.category)?.color; 
+    const categoryColor = categories.find(cat => cat.key === recipe.category)?.color ?? '#9b9797'; 
     return (
         <div className="recipe-details">
             <div className="recipe-details-item">

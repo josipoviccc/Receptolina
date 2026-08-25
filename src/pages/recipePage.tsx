@@ -4,7 +4,11 @@ import { Recipe } from "../types/recipes";
 import RecipeTitle from "../components/recipePageComponents/recipeTitle";
 import RecipeDetails from "../components/recipePageComponents/recipeDetails";
 
-export default function RecipePage({ recipes }: { recipes: Recipe[] }) {
+type RecipePageProps = {
+    recipes: Recipe[];
+};
+
+export default function RecipePage({ recipes }: RecipePageProps) {
     const { id } = useParams(); //vraća odmah id iz url-a, nakon : i pretvara ga u string
     const navigate = useNavigate();
     const recipe = recipes.find((r) => r.id === Number(id));

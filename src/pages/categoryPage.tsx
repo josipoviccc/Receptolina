@@ -1,6 +1,4 @@
-import {useState} from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
 import { Recipe } from "../types/recipes";
 
@@ -9,8 +7,7 @@ type CategoryPageProps = {
 };
 
 export default function CategoryPage({ recipes }: CategoryPageProps) {
-    const { categoryKey } = useParams(); //vraća string ili undefined iz url-a, nakon :
-    const [searchQuery, setSearchQuery] = useState("");
+    const { categoryKey } = useParams(); //vraća string ili undefined iz url-a, nakon :, {} je destrukturiranje objekta, jer useParams vraća objekt
     const navigate = useNavigate();
 
     if (!categoryKey) { 
@@ -20,26 +17,13 @@ export default function CategoryPage({ recipes }: CategoryPageProps) {
         </div>;
     }
 
-    const categoryRecipes = recipes.filter((recipe) => recipe.category === categoryKey);
+    const categoryRecipes = recipes.filter(recipe => recipe.category === categoryKey);
 
-    const filteredRecipes = categoryRecipes.filter((recipe) => {
-                if (searchQuery.trim() === "") return true;
-                try {
-                    const regex = new RegExp(searchQuery, "i");
-                    return (
-                        regex.test(recipe.title) ||
-                        recipe.tags.some((tag) => regex.test(tag))
-                    );
-                } catch {
-                    return true;
-                }
-            });
     return(
         <div className="category-page">
-            <SearchBar onSearch={setSearchQuery} />
             <CategorySection
-                categoryKey={categoryKey}
-                recipes={filteredRecipes}
+                categoryKey={categoryKey} //treba zbog izvlačenja boja i labela iz constants.ts
+                recipes={categoryRecipes}
             />
         </div>
     )
