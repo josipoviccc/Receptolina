@@ -6,7 +6,7 @@
   "sideEffects": true,
   "scripts": {
     "dev": "node dev-server.mjs",
-    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --loader:.svg=dataurl --public-path=/dist/ && node -e \"require('fs').copyFileSync('index.html', 'dist/index.html')\""
+    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --loader:.svg=dataurl --public-path=/RecipeBox/dist/ && node -e \"require('fs').copyFileSync('index.html', 'dist/index.html')\""
   },
   "keywords": [],
   "author": "Katarina",
