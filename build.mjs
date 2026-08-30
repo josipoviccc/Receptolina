@@ -11,10 +11,11 @@ await esbuild.build({
 });
 
 let html = fs.readFileSync("index.html", "utf8");
-html = html
-  .replace('src="dist/bundle.js"', 'src="bundle.js"');
+html = html.replace('src="dist/bundle.js"', 'src="bundle.js"');
 fs.writeFileSync("dist/index.html", html);
 
 fs.mkdirSync("dist/src/assets", { recursive: true });
 fs.copyFileSync("src/style.css", "dist/src/style.css");
-fs.copyFileSync("src/assets/RecipeBoxLogo.svg", "dist/src/assets/RecipeBoxLogo.svg");
+fs.copyFileSync("src/assets/receptolina-logo.png", "dist/src/assets/receptolina-logo.png");
+
+fs.writeFileSync("dist/CNAME", "receptolina.com");
