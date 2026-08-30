@@ -6,7 +6,7 @@
   "sideEffects": true,
   "scripts": {
     "dev": "node dev-server.mjs",
-    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --loader:.svg=dataurl --public-path=/RecipeBox/ && node postbuild.mjs"
+    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --loader:.svg=dataurl --public-path=/RecipeBox/ --define:BASE_PATH='\"/RecipeBox\"' && node postbuild.mjs"
   },
   "keywords": [],
   "author": "Katarina",

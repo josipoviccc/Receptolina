@@ -7,6 +7,7 @@ const ctx = await esbuild.context({
   outfile: "dist/bundle.js",
   loader: { ".png": "file", ".jpg": "file", ".css": "css", ".svg": "dataurl" },
   publicPath: "/dist/",
+  define: { BASE_PATH: '""' },
 });
 
 await ctx.watch();

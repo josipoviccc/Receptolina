@@ -25475,7 +25475,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_jsx_runtime13 = __toESM(require_jsx_runtime());
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
-    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_react4.default.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(App, {}) }) })
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_react4.default.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(BrowserRouter, { basename: "", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(App, {}) }) })
   );
 })();
 /*! Bundled license information:
