@@ -107,7 +107,7 @@ export const SavoryRecipes: Recipe[] = [
         "Narezanu piletinu marinirati sa sastojcima za marinadu 10 minuta.",
         "U maloj posudi pomiješati sastojke za umak za rezance i ostaviti sa strane.",
         "U velikoj posudi ili velikom tiganju namočiti rezance u vrelu vodu 10-15 sekundi, ili dok se JEDVA ne razdvoje. Ocijediti rezance.",
-        "Zagrijati 1 kašičicu (5 ml) biljnog ulja na srednje jakoj vatri. Pržiti piletinu dok ne bude 75% pečena.",
+        "Zagrijati 1 žličicu (5 ml) biljnog ulja na srednje jakoj vatri. Pržiti piletinu dok ne bude 75% pečena.",
         "Dodati mrkvu, celer i kupus, pa pržiti dok ne omekšaju. Sve gurnuti na stranu tiganja.",
         "Dodati preostalo ulje u prazan prostor. Dodati rezance i umak. Pržiti uz miješanje dok rezanci ne budu prekriveni umakom, oko 30 sekundi. Dodati klice i mladi luk. Pržiti još 10 sekundi. Poslužiti odmah!",
         ]
@@ -128,9 +128,9 @@ export const SavoryRecipes: Recipe[] = [
             items: [
                 { name: "mljeveno svinjsko meso", quantity: "500 g" },
                 { name: "luk", quantity: "1" },
-                { name: "češnjak", quantity: "2 česnja" },
+                { name: "češnjak", quantity: "2 češnja" },
                 { name: "sos od rajčice", quantity: "400 g" },
-                { name: "maslinovo ulje", quantity: "2 kašike" },
+                { name: "maslinovo ulje", quantity: "2 žlice" },
                 { name: "sol", quantity: "po ukusu" },
                 { name: "papar", quantity: "po ukusu" },
             ],
@@ -152,7 +152,7 @@ export const SavoryRecipes: Recipe[] = [
             "Posolite i popaprite po ukusu.",
             "Za bešamel umak, otopite maslac u drugoj tavi na srednje jakoj vatri. Dodajte brašno i miješajte dok smjesa ne postane glatka.",
             "Postupno dodajte mlijeko, neprestano miješajući dok umak ne postane gust i gladak.",
-            "U velikom vatrostalnom posudu složite sloj bešamel umaka, zatim lazanja te sloj bolognese umaka te sloj bešamel umaka. Ponovite dok ne potrošite sve sastojke, završavajući sa slojem bešamel umaka.",
+            "U velikoj vatrostalnoj posudi složite sloj bešamel umaka, zatim lazanja te sloj bolognese umaka te sloj bešamel umaka. Ponovite dok ne potrošite sve sastojke, završavajući sa slojem bešamel umaka i obilnim slojem sira.",
             "Pecite u pećnici 30-40 minuta dok vrh ne postane zlatno smeđi i mjehurić."
         ]
     },
