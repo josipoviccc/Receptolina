@@ -7,9 +7,8 @@ const ctx = await esbuild.context({
   outfile: "dist/bundle.js",
   loader: { ".png": "file", ".jpg": "file", ".css": "css", ".svg": "dataurl" },
   publicPath: "/dist/",
-  define: { BASE_PATH: '""' },
+  define: { BASE_PATH: JSON.stringify("") },
 });
-
 await ctx.watch();
 
 const { host, port } = await ctx.serve({
