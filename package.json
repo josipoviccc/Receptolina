@@ -1,12 +1,12 @@
 {
-  "name": "RecipeLog",
+  "name": "RecipeBox",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "sideEffects": true,
   "scripts": {
-    "dev": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --servedir=. --serve=0.0.0.0:8000 --loader:.png=file --loader:.jpg=file --loader:.css=css --public-path=/dist/",
-    "build": "tsc && esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --public-path=/dist/"
+  "dev": "node dev-server.mjs",
+  "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --loader:.png=file --loader:.jpg=file --loader:.css=css --loader:.svg=dataurl --public-path=/dist/"
   },
   "keywords": [],
   "author": "Katarina",
@@ -17,6 +17,7 @@
     "@types/react-slick": "^0.23.13",
     "@types/validator": "^13.15.10",
     "esbuild": "^0.25.11",
+    "esbuild-plugin-svgr": "^3.1.1",
     "typescript": "^5.9.3"
   },
   "dependencies": {

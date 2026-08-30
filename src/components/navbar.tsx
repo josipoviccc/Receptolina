@@ -18,6 +18,8 @@ export default function Navbar() {
                     <li><NavLink to="/categoryPage/slano" className="navbarLink">Slano</NavLink></li>
                     <li><NavLink to="/categoryPage/pecivo" className="navbarLink">Peciva</NavLink></li>
                     <li><NavLink to="/categoryPage/umaci" className="navbarLink">Umaci</NavLink></li>
+                    <li><NavLink to="/categoryPage/zacini-marinade" className="navbarLink">Začini i Marinade</NavLink></li>
+                    <li><NavLink to="/categoryPage/pića" className="navbarLink">Pića</NavLink></li>
                 </ul>
         </nav>
     );

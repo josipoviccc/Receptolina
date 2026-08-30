@@ -27,6 +27,7 @@ export default function CategorySection({ categoryKey, recipes }: CategorySectio
                         minutes={recipe.minutes}
                         tags={recipe.tags}
                         category={recipe.category}
+                        subcategory={recipe.subcategory}
                         portions={recipe.portions}
                         risingTime={recipe.risingTime}
                         coolingTime={recipe.coolingTime}

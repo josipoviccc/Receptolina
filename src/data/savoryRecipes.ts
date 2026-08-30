@@ -13,6 +13,7 @@ export const SavoryRecipes: Recipe[] = [
         minutes: 45,
         tags: ["mesne okruglice"],
         category: "slano",
+        subcategory: "mesna jela",
         portions: 6,
         ingredientGroups: [
         {
@@ -63,6 +64,7 @@ export const SavoryRecipes: Recipe[] = [
         minutes: 50,
         tags: ["piletina", "Chow Mein"],
         category: "slano",
+        subcategory: "tjestenina",
         portions: 4,
         ingredientGroups: [
         {
@@ -118,6 +120,7 @@ export const SavoryRecipes: Recipe[] = [
         minutes: 80,
         tags: ["lazanje"],
         category: "slano",
+        subcategory: "tjestenina",
         portions: 6,
         ingredientGroups: [
         {
@@ -161,6 +164,7 @@ export const SavoryRecipes: Recipe[] = [
         image: potatoSoup,
         tags: ["krumpir", "juha"],
         category: "slano",
+        subcategory: "juhe",
         portions: 5,
         ingredientGroups: [
         {

@@ -18,6 +18,7 @@ export type Recipe = {
   ingredientGroups: IngredientGroup[];
   steps: string[];
   category: string;
+  subcategory: string;
   portions: number;
   risingTime?: number;
   coolingTime?: number;

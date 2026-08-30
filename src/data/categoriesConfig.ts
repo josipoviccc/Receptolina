@@ -12,6 +12,6 @@ type categoryConfig = {
 export const categoriesConfig: Record<string, categoryConfig> = {
     slatko: { label: "Slatko", recipes: SweetRecipes },
     slano: { label: "Slano", recipes: SavoryRecipes },
-    pecivo: { label: "Peciva", recipes: PastryRecipes },
+    pecivo: { label: "Pekarski proizvodi", recipes: PastryRecipes },
     umaci: { label: "Umaci", recipes: SaucesRecipes },
 };

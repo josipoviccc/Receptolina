@@ -9,6 +9,7 @@ export const PastryRecipes: Recipe[] = [
         minutes: 75,
         tags: ["brioche", "pecivo"],
         category: "pecivo",
+        subcategory: "kruh",
         image: kruhBezMijesenja,
         risingTime: 480,
         portions: 4,

@@ -38,6 +38,7 @@ export const SweetRecipes: Recipe[] = [
     }
     ],
     category: "slatko",
+    subcategory: "tart",
     portions: 10,
     coolingTime: 30,
     steps: [
@@ -67,6 +68,7 @@ export const SweetRecipes: Recipe[] = [
     },
     ],
     category: "slatko",
+    subcategory: "kolači",
     portions: 20,
     coolingTime: 120,
     steps: [
@@ -97,6 +99,7 @@ export const SweetRecipes: Recipe[] = [
     },
     ],
     category: "slatko",
+    subcategory: "kolači",
     portions: 20,
     coolingTime: 10,
     steps: [
@@ -131,6 +134,7 @@ export const SweetRecipes: Recipe[] = [
     },
     ],
     category: "slatko",
+    subcategory: "kolači",
     portions: 6,
     coolingTime: 360,
     steps: [
@@ -169,6 +173,7 @@ export const SweetRecipes: Recipe[] = [
     },
     ],
     category: "slatko",
+    subcategory: "palačinke",
     portions: 6,
     steps: [
         "U zdjeli pomiješati jogurt, jaje, vaniliju, med, mlijeko i limunov sok te izmiješati žicom dok se ne sjedini. ",

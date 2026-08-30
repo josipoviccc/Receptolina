@@ -10,6 +10,7 @@ export const SaucesRecipes: Recipe[] = [
         minutes: 10,
         tags: ["umaci", "raising canes"],
         category: "umaci",
+        subcategory: "dipovi",
         image: raisingCanes,
         portions: 3,
         ingredientGroups: [
@@ -37,6 +38,7 @@ export const SaucesRecipes: Recipe[] = [
         minutes: 10,
         tags: ["umaci", "kfc"],
         category: "umaci",
+        subcategory: "dipovi",
         image: kentuckyGold,
         portions: 3,
         ingredientGroups: [
