@@ -19,11 +19,23 @@ html, body, #root {
   padding: 24px 32px 40px;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 70px;
+  width: auto;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between; /* stavlja prvi element na lijevu stranu a drugi na desnu stranu */
-  padding: 20px 40px;
+  padding: 0 30px;
   background-color: #FFFDF9;
   border-bottom: 1px solid #E8DFD0;
 }

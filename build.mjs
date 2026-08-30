@@ -6,13 +6,12 @@ await esbuild.build({
   bundle: true,
   outfile: "dist/bundle.js",
   loader: { ".png": "file", ".jpg": "file", ".css": "css", ".svg": "dataurl" },
-  publicPath: "/RecipeBox/",
-  define: { BASE_PATH: JSON.stringify("/RecipeBox") },
+  publicPath: "/",
+  define: { BASE_PATH: JSON.stringify("") },
 });
 
 let html = fs.readFileSync("index.html", "utf8");
 html = html
-  .replace('<base href="/">', '<base href="/RecipeBox/">')
   .replace('src="dist/bundle.js"', 'src="bundle.js"');
 fs.writeFileSync("dist/index.html", html);
 

@@ -24465,7 +24465,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   function Navbar() {
     const [menuOpen, setMenuOpen] = (0, import_react.useState)(false);
     return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { className: "navbar", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, { to: "/", children: "RecipeBox" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, { to: "/", className: "navbar-brand", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { className: "navbar-logo", src: "src/assets/receptolina-logo.png", alt: "Receptolina Logo" }),
+        "Receptolina"
+      ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "menu", onClick: () => setMenuOpen(!menuOpen), children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {}),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {}),
