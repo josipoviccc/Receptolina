@@ -1,5 +1,6 @@
 import esbuild from "esbuild";
 import http from "http";
+import "dotenv/config";
 
 const ctx = await esbuild.context({
   entryPoints: ["src/index.tsx"],
@@ -7,7 +8,13 @@ const ctx = await esbuild.context({
   outfile: "dist/bundle.js",
   loader: { ".png": "file", ".jpg": "file", ".css": "css", ".svg": "dataurl" },
   publicPath: "/dist/",
-  define: { BASE_PATH: JSON.stringify("") },
+  define: {
+    BASE_PATH: JSON.stringify(""),
+    "process.env.NODE_ENV": JSON.stringify("development"),
+    "process.env.REACT_APP_SUPABASE_URL": JSON.stringify(process.env.REACT_APP_SUPABASE_URL),
+    "process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(process.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY),
+    "process": JSON.stringify({ env: { NODE_ENV: "development" } }),
+  },
 });
 await ctx.watch();
 

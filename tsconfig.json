@@ -12,7 +12,8 @@
     "rootDir": "./src",
     "paths": {
       "@components": ["./components&/*"]
-    }
+    },
+    "types": ["node"]
   },
   "include": ["src"]
 }

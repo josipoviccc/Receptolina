@@ -1,11 +1,16 @@
 import { useState } from "react";
 import SearchBar from "../components/searchBar";
 import CategorySection from "../components/categorySection";
-import { AllRecipes as recipes } from "../data/allRecipes";
+import { useRecipes } from "../hooks/useRecipes";
 import { categories } from "../data/constants";
+import supabase from "../supabaseClient";
 
 export default function HomePage() {
+    const { recipes, loading, error } = useRecipes();
     const [searchQuery, setSearchQuery] = useState(""); //searchQuery je trenutni tekst u search baru, a setSearchQuery je funkcija koja mijenja searchQuery
+
+    if (loading) return <p>Učitavanje...</p>;
+    if (error) return <p>Greška: {error}</p>;
 
     const filteredRecipes = recipes.filter(recipe => {
         if (searchQuery.trim() === "") return true;
