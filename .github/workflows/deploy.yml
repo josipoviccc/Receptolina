@@ -20,6 +20,9 @@ jobs:
       - run: npm install
       - run: chmod +x node_modules/.bin/esbuild
       - run: npm run build
+        env:
+          REACT_APP_SUPABASE_URL: ${{ secrets.REACT_APP_SUPABASE_URL }}
+          REACT_APP_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.REACT_APP_SUPABASE_PUBLISHABLE_KEY }}
       - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
