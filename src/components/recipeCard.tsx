@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { categories } from "../data/constants";
 import { Recipe } from "../types/recipes";
 
+
 export default function RecipeCard({ 
     id,
     link, 
