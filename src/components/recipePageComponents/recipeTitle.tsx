@@ -30,7 +30,7 @@ export default function RecipeTitle({ recipe }: RecipeTitleProps) {
                         {recipe.risingTime < 90 && (
                             <div className="recipe-time">{recipe.risingTime} min</div>
                         )}
-                        {recipe.risingTime > 90 && (
+                        {recipe.risingTime >= 90 && (
                             <div className="recipe-time-text">{(recipe.risingTime / 60).toFixed(1)} h</div>
                         )}
                         <div className="recipe-time-text">DIZANJE</div>
