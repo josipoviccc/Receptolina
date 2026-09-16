@@ -41,7 +41,7 @@ export default function RecipeTitle({ recipe }: RecipeTitleProps) {
                         {recipe.coolingTime < 90 && (
                             <div className="recipe-time">{recipe.coolingTime} min</div>
                         )}
-                        {recipe.coolingTime > 90 && (
+                        {recipe.coolingTime >= 90 && (
                             <div className="recipe-time-text">{(recipe.coolingTime / 60).toFixed(1)} h</div>
                         )}
                         <div className="recipe-time-text">HLAĐENJE</div>
