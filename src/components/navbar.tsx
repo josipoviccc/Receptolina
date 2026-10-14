@@ -1,7 +1,6 @@
 import {Link, NavLink} from "react-router-dom";
 import { useState } from "react";
 
-
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -25,6 +24,7 @@ export default function Navbar() {
                     <li><NavLink to="/categoryPage/umaci" className="navbarLink">Umaci</NavLink></li>
                     <li><NavLink to="/categoryPage/zacini-marinade" className="navbarLink">Začini i Marinade</NavLink></li>
                     <li><NavLink to="/categoryPage/pića" className="navbarLink">Pića</NavLink></li>
+                    <li><NavLink to="/loginSignupPage" className="navbarLink">Prijava / Registracija</NavLink></li>
                 </ul>
         </nav>
     );

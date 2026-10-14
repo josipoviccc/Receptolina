@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import RecipePage from "./pages/recipePage";
 import CategoryPage from "./pages/categoryPage";
 import { useRecipes } from "./hooks/useRecipes";
+import LoginSignupPage from "./pages/loginSignupPage";
 
 export default function App() {
   const { recipes, loading, error } = useRecipes();
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/categoryPage/:categoryKey" element={<CategoryPage recipes={recipes} />} />
         <Route path="/recipePage/:id" element={<RecipePage recipes={recipes} />} />
+        <Route path="/loginSignupPage" element={<LoginSignupPage />} />
       </Routes>
     </>
   );

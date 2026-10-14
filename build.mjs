@@ -19,6 +19,7 @@ await esbuild.build({
 
 let html = fs.readFileSync("index.html", "utf8");
 html = html.replace('src="dist/bundle.js"', 'src="bundle.js"');
+html = html.replace('href="dist/bundle.css"', 'href="bundle.css"');
 fs.writeFileSync("dist/index.html", html);
 
 fs.mkdirSync("dist/src/assets", { recursive: true });
