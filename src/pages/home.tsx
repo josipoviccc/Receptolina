@@ -27,7 +27,10 @@ export default function HomePage() {
 
     return (
         <div className="home-page">
-            <SearchBar onSearch={setSearchQuery} />
+            <section className="hero"></section>
+            <div className="home-search">
+                <SearchBar onSearch={setSearchQuery} />
+            </div>
 
             {categories.map((category) => {
                 const categoryRecipes = filteredRecipes.filter(
